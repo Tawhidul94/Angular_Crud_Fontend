@@ -1,0 +1,28 @@
+
+<h3 style="text-align:center;">employee-lst works!</h3>
+<br/>
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Update</th>
+            <th scope="col">Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let emp of getAllEmployee">
+            <th scope="row">{{emp.id}}</th>
+            <td>{{emp.firstName}}</td>
+            <td>{{emp.lastName}}</td>
+            <td>{{emp.phone}}</td>
+            <td><button type="button" class="btn btn-success" (click)="updateEmployeerecord(emp.id)">Update</button></td>
+            <td><button type="button" class="btn btn-danger" (click)="deleteEmployeerecord(emp.id)">Delete</button></td>
+
+        </tr>
+        </tbody>
+    </table>
+</div>
